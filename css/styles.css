@@ -6,6 +6,13 @@
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth;scroll-padding-top:4.5rem}
+  --bg:#fbf6f1; --tint:#f4e9e3; --ink:#3b2a27; --muted:#6e5650;
+  --accent:#8a5a53; --accent-dark:#6f4540; --line:#e2d0c8;
+  --serif:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;
+  --sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:4.5rem}
 body{margin:0;background:var(--bg);color:var(--ink);font:1.0625rem/1.65 var(--sans)}
 img{max-width:100%;height:auto}
 .wrap{max-width:68rem;margin:0 auto;padding:0 1.25rem}
@@ -105,3 +112,11 @@ a{color:var(--accent-dark)}
 .overview{font-family:var(--serif);font-size:1.15rem;color:var(--accent-dark);letter-spacing:.02em;margin:0 0 1rem}
 .form-inline{margin-top:1rem;max-width:30rem}
 .empty p{margin:.3rem 0}
+
+/* our cats */
+.cat-block{margin-top:2rem}
+.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:.75rem}
+.gal-item{margin:0;border-radius:.75rem;overflow:hidden;background:#fff;border:1px solid var(--line)}
+.gal-item img{display:block;width:100%;height:100%;aspect-ratio:1;object-fit:cover}
+.photo-link{display:block}
+@media (max-width:48rem){.gallery{grid-template-columns:repeat(2,1fr)}}
