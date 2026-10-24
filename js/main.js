@@ -41,11 +41,11 @@
     var body = el('div', 'body');
     body.appendChild(el('span', 'status', k.status || 'Available'));
     body.appendChild(el('h3', '', k.name));
-    [k.sex, k.color, k.born ? 'Born ' + k.born : '', k.price ? 'Price: ' + k.price : '', k.about].forEach(function (t) {
+    [k.sex, k.color, k.born ? 'Born ' + k.born : '', k.ready ? 'Ready to go home: ' + k.ready : '', k.price ? 'Price: ' + k.price : '', k.about].forEach(function (t) {
       if (t) body.appendChild(el('p', '', t));
     });
     var a = el('a', 'btn btn-quiet', 'Ask about ' + k.name);
-    a.href = '#contact';
+    a.href = 'contact.html?kitten=' + encodeURIComponent(k.name);
     body.appendChild(a);
     card.appendChild(body);
     list.appendChild(card);
