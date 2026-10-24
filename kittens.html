@@ -17,7 +17,7 @@
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
 
-  <div class="draft-bar" role="note">Working draft for approval. Dashed boxes are temporary placeholders, not final content.</div>
+  <div class="draft-bar" role="note">This website is still being filled in. Some sections and photos are on their way.</div>
 
   <header class="site-header">
     <div class="wrap header-inner">
@@ -31,8 +31,22 @@
 
   <main id="main"><section class="section"><div class="wrap"><h1 class="h-page">Available kittens</h1>
 <p class="lead">Each kitten is listed with confirmed details only. Availability can change, so please write to us to confirm.</p>
+<p class="note">Page updated: <span id="updated">October 23, 2026</span></p>
 <div id="kitten-list" class="kitten-grid" aria-live="polite"></div>
-<p id="kitten-empty" class="empty" hidden>We do not have kittens listed right now. If you would like to hear about future litters, please <a href="contact.html">get in touch</a> and we will let you know when something is confirmed.</p>
+<div id="kitten-empty" class="empty" hidden>
+<p><strong>No kittens are listed right now.</strong> Litters are announced here as soon as they are confirmed.</p>
+<p>Leave your name and email, and we will write to you when a litter is confirmed. No obligation.</p>
+<form id="waitlist-form" class="form form-inline" novalidate>
+<p id="wl-status" class="status-msg" role="status" aria-live="polite"></p>
+<label for="wl-name">Your name</label><input id="wl-name" name="name" type="text" autocomplete="name" required>
+<span class="err" id="e-wl-name"></span>
+<label for="wl-email">Email</label><input id="wl-email" name="email" type="email" autocomplete="email" required>
+<span class="err" id="e-wl-email"></span>
+<label for="wl-msg">Anything we should know? (optional)</label><textarea id="wl-msg" name="message" rows="2"></textarea>
+<div class="hp" aria-hidden="true"><label for="wl-site">Leave this empty</label><input id="wl-site" name="website" type="text" tabindex="-1" autocomplete="off"></div>
+<button class="btn btn-primary" type="submit">Join the waiting list</button>
+</form>
+</div>
 <p class="actions"><a class="btn btn-primary" href="adopt.html">How to adopt</a></p></div></section></main>
 
   <footer class="site-footer">
@@ -47,6 +61,8 @@
   </footer>
 
   <script src="data/kittens.js"></script>
+  <script src="data/config.js"></script>
+  <script src="js/waitlist.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>
