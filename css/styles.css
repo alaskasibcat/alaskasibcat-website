@@ -102,3 +102,6 @@ a{color:var(--accent-dark)}
 .highlight{background:#fff;border:1px solid var(--line);border-left:4px solid var(--accent);border-radius:.75rem;padding:1.25rem 1.5rem}
 .highlight ul{padding-left:1.25rem}
 .highlight li{margin-bottom:.5rem}
+.overview{font-family:var(--serif);font-size:1.15rem;color:var(--accent-dark);letter-spacing:.02em;margin:0 0 1rem}
+.form-inline{margin-top:1rem;max-width:30rem}
+.empty p{margin:.3rem 0}
