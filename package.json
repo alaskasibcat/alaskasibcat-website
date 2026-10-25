@@ -1,0 +1,1 @@
+{"name":"alaskasibcat-website","private":true,"type":"module","scripts":{"build":"node scripts/build-static.mjs","test:reviews":"node --test tests/reviews.test.js"},"dependencies":{"jose":"6.2.13"}}

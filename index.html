@@ -22,6 +22,7 @@
   <script type="application/ld+json">
   {"@context":"https://schema.org","@type":"Organization","name":"ALASKASIBCAT","alternateName":"Siberian Cat Alaska Cattery","url":"https://alaskasibcat.com/","logo":"https://alaskasibcat.com/favicon.svg","image":"https://alaskasibcat.com/images/home-cover-2026-10-24-1672.jpg","description":"A small, CFA-registered home cattery of Siberian cats in Wasilla, Alaska.","address":{"@type":"PostalAddress","addressLocality":"Wasilla","addressRegion":"AK","addressCountry":"US"},"sameAs":["https://www.instagram.com/siberian.cat.alaska.cattery/","https://www.facebook.com/alaskasibcat/"]}
   </script>
+  <link rel="stylesheet" href="css/reviews.css?v=20261025a">
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -33,7 +34,7 @@
       <a class="brand" href="index.html" aria-label="Siberian Cat Alaska Cattery, ALASKASIBCAT — home"><span class="brand-name">Siberian Cat Alaska Cattery</span><span class="brand-sub">ALASKASIBCAT</span></a>
       <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
       <nav id="site-nav" class="site-nav" aria-label="Main">
-        <ul><li><a href="kittens.html">Available kittens</a></li><li><a href="cats.html">Our cats</a></li><li><a href="about.html">About us</a></li><li><a href="adopt.html">How to adopt</a></li><li><a href="contact.html">Contact</a></li></ul>
+        <ul><li><a href="kittens.html">Available kittens</a></li><li><a href="cats.html">Our cats</a></li><li><a href="about.html">About us</a></li><li><a href="adopt.html">How to adopt</a></li><li><a href="reviews.html">Reviews</a></li><li><a href="contact.html">Contact</a></li></ul>
       </nav>
     </div>
   </header>
@@ -97,6 +98,12 @@
       </div>
     </section>
 
+    <section id="family-stories" class="section section-tint" aria-labelledby="family-stories-title" hidden><div class="wrap">
+      <p class="eyebrow">From our kitten families</p><h2 id="family-stories-title">Little cats. Big parts of our lives.</h2>
+      <div class="review-grid" data-published-reviews data-limit="3" data-excerpt="true"></div>
+      <p><a class="text-link" href="reviews.html">Read family stories or leave a review</a></p>
+    </div></section>
+
     <section id="contact" class="section section-tint"><div class="wrap"><h2>Contact</h2><p>Write to us with any question about our cats or kittens. We reply in writing.</p><p class="actions"><a class="btn btn-primary" href="contact.html">Contact us</a></p></div></section>
   </main>
 
@@ -113,5 +120,6 @@
 
   <script src="data/kittens.js"></script>
   <script src="js/main.js"></script>
+  <script type="module" src="js/reviews-public.js?v=20261025a"></script>
 </body>
 </html>
