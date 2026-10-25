@@ -1,0 +1,21 @@
+/* Home page cover (approved by Natalia 2026-10-24, HOME-INTEGRATE-20261024-01). Loaded after styles.css, only by index.html / index-preview.html */
+.cover{position:relative;background:#e9eef2;padding:0 0 1.5rem}
+.cover-media{margin:0 auto;line-height:0;max-width:62rem}
+.cover-media img{display:block;width:100%;height:auto;object-fit:contain;aspect-ratio:1672/941}
+.cover > .wrap{max-width:62rem;padding:0}
+.cover-card{position:relative;background:rgba(251,246,241,.97);border:1px solid var(--line);border-top:0;border-radius:0 0 1rem 1rem;padding:1.1rem 1.5rem;max-width:none;margin:0;box-shadow:0 10px 30px rgba(59,42,39,.12);text-align:center}
+.cover-card .actions{justify-content:center}
+.cover-card h1{font-size:clamp(1.5rem,2.6vw,2rem);margin-bottom:.4rem}
+.cover-card .lead{margin-bottom:.5rem}
+.cover-card .actions{margin-top:.75rem}
+.cover-links{margin:.75rem 0 0;font-size:.95rem;color:var(--muted)}
+.cover-links a{font-weight:600}
+#story .lead{color:var(--accent-dark)}
+#story p{margin:0 0 1rem}
+@media (max-width:48rem){
+  .cover{padding-bottom:1.5rem}
+  .cover-card{margin:0;padding:1.1rem 1rem;text-align:left}
+  .cover-card .actions{justify-content:flex-start}
+  .cover-card h1{font-size:1.5rem}
+  .cover-card .lead{font-size:1rem}
+}
