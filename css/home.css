@@ -9,7 +9,7 @@
 .cover-card .lead{margin-bottom:.5rem}
 .cover-card .actions{margin-top:.75rem}
 .cover-links{margin:.75rem 0 0;font-size:.95rem;color:var(--muted)}
-.cover-links a{font-weight:600}
+.cover-links a{font-weight:600;display:inline-block;padding:.45rem 0}
 #story .lead{color:var(--accent-dark)}
 #story p{margin:0 0 1rem}
 @media (max-width:48rem){
