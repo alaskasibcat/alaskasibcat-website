@@ -27,10 +27,10 @@
 
   <header class="site-header">
     <div class="wrap header-inner">
-      <a class="brand" href="index.html" aria-label="Siberian Cat Alaska Cattery, ALASKASIBCAT — home"><span class="brand-name">Siberian Cat Alaska Cattery</span><span class="brand-sub">ALASKASIBCAT</span></a>
+      <a class="brand" href="/" aria-label="Siberian Cat Alaska Cattery, ALASKASIBCAT — home"><span class="brand-name">Siberian Cat Alaska Cattery</span><span class="brand-sub">ALASKASIBCAT</span></a>
       <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
       <nav id="site-nav" class="site-nav" aria-label="Main">
-        <ul><li><a href="kittens.html">Available kittens</a></li><li><a href="cats.html">Our cats</a></li><li><a href="about.html">About us</a></li><li><a href="adopt.html">How to adopt</a></li><li><a href="reviews.html" aria-current="page">Reviews</a></li><li><a href="contact.html">Contact</a></li></ul>
+        <ul><li><a href="/kittens">Available kittens</a></li><li><a href="/cats">Our cats</a></li><li><a href="/about">About us</a></li><li><a href="/adopt">How to adopt</a></li><li><a href="/reviews" aria-current="page">Reviews</a></li><li><a href="/contact">Contact</a></li></ul>
       </nav>
     </div>
   </header>
@@ -39,14 +39,14 @@
     <section class="section"><div class="wrap">
       <div class="reviews-intro"><p class="eyebrow">Life with an ALASKASIBCAT Siberian</p><h1 class="h-page">Stories from our kitten families</h1>
       <p class="lead">The best part of raising kittens is hearing about the lives they grow into. Here, our families can share a little of their story.</p>
-      <p class="actions"><a class="btn btn-primary" href="#leave-review">Leave a review</a><a class="btn btn-quiet" href="contact.html">Contact us</a></p></div>
+      <p class="actions"><a class="btn btn-primary" href="#leave-review">Leave a review</a><a class="btn btn-quiet" href="/contact">Contact us</a></p></div>
       <div class="review-grid" data-published-reviews aria-live="polite"></div>
       <p id="reviews-status" class="empty" role="status">Loading family stories…</p>
-      <noscript><p>Enable JavaScript to read reviews, or <a href="contact.html">contact us</a> to share your experience.</p></noscript>
+      <noscript><p>Enable JavaScript to read reviews, or <a href="/contact">contact us</a> to share your experience.</p></noscript>
     </div></section>
     <section id="leave-review" class="section section-tint"><div class="wrap reviews-form-layout">
       <div><p class="eyebrow">Stay in touch</p><h2>Share your story</h2><p>How is your Siberian settling in? We would love to hear about your experience and your cat’s personality.</p>
-      <p class="small">Reviews are checked before publication. Please use the name you would like displayed publicly, and leave out private contact details.</p><p class="small">For questions or anything you would prefer to discuss privately, <a href="contact.html">send us a message</a>.</p></div>
+      <p class="small">Reviews are checked before publication. Please use the name you would like displayed publicly, and leave out private contact details.</p><p class="small">For questions or anything you would prefer to discuss privately, <a href="/contact">send us a message</a>.</p></div>
       <form id="customer-review-form" class="form" action="/api/reviews" method="post">
         <p id="review-form-status" class="status-msg" role="status" aria-live="polite">Checking review submissions…</p>
         <fieldset id="customer-review-fields" disabled><legend class="sr-only">Your review</legend>
@@ -57,7 +57,7 @@
           <label class="consent" for="review-consent"><input id="review-consent" name="consent" type="checkbox" required><span>I agree that my display name, cat’s name and review may be published on this website after approval.</span></label>
           <div id="review-verification"></div><button class="btn btn-primary" type="submit" disabled>Send for approval</button>
         </fieldset>
-        <p class="small">You can also <a href="contact.html">contact us directly</a> to share a review.</p>
+        <p class="small">You can also <a href="/contact">contact us directly</a> to share a review.</p>
       </form>
     </div></section>
   </main>
@@ -72,7 +72,7 @@
     </div>
   </footer>
 
-  <script src="js/main.js"></script>
+  <script src="js/main.js?v=20261025b"></script>
   <script type="module" src="js/reviews-public.js?v=20261025a"></script>
 </body>
 </html>
