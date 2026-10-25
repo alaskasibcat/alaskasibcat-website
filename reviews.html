@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Family reviews | ALASKASIBCAT</title>
+  <meta name="description" content="Stories from ALASKASIBCAT kitten families. Read approved reviews or share your experience with our Siberian cattery in Wasilla, Alaska.">
+  <!-- DRAFT: remove the next line only after Natalia approves publication -->
+  <meta name="robots" content="noindex, nofollow">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Family reviews | ALASKASIBCAT">
+  <meta property="og:description" content="Stories from ALASKASIBCAT kitten families. Read approved reviews or share your experience with our Siberian cattery in Wasilla, Alaska.">
+  <meta property="og:image" content="https://alaskasibcat.com/images/home-cover-2026-10-24-1672.jpg">
+  <meta property="og:image:width" content="1672">
+  <meta property="og:image:height" content="941">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta property="og:url" content="https://alaskasibcat.com/reviews">
+  <link rel="canonical" href="https://alaskasibcat.com/reviews">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/styles.css?v=20261024b">
+  <link rel="stylesheet" href="css/reviews.css?v=20261025a">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <div class="draft-bar" role="note">We’re adding more photos and information to our website. Please contact us for current kitten availability.</div>
+
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="index.html" aria-label="Siberian Cat Alaska Cattery, ALASKASIBCAT — home"><span class="brand-name">Siberian Cat Alaska Cattery</span><span class="brand-sub">ALASKASIBCAT</span></a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+      <nav id="site-nav" class="site-nav" aria-label="Main">
+        <ul><li><a href="kittens.html">Available kittens</a></li><li><a href="cats.html">Our cats</a></li><li><a href="about.html">About us</a></li><li><a href="adopt.html">How to adopt</a></li><li><a href="reviews.html" aria-current="page">Reviews</a></li><li><a href="contact.html">Contact</a></li></ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="section"><div class="wrap">
+      <div class="reviews-intro"><p class="eyebrow">Life with an ALASKASIBCAT Siberian</p><h1 class="h-page">Stories from our kitten families</h1>
+      <p class="lead">The best part of raising kittens is hearing about the lives they grow into. Here, our families can share a little of their story.</p>
+      <p class="actions"><a class="btn btn-primary" href="#leave-review">Leave a review</a><a class="btn btn-quiet" href="contact.html">Contact us</a></p></div>
+      <div class="review-grid" data-published-reviews aria-live="polite"></div>
+      <p id="reviews-status" class="empty" role="status">Loading family stories…</p>
+      <noscript><p>Enable JavaScript to read reviews, or <a href="contact.html">contact us</a> to share your experience.</p></noscript>
+    </div></section>
+    <section id="leave-review" class="section section-tint"><div class="wrap reviews-form-layout">
+      <div><p class="eyebrow">Stay in touch</p><h2>Share your story</h2><p>How is your Siberian settling in? We would love to hear about your experience and your cat’s personality.</p>
+      <p class="small">Reviews are checked before publication. Please use the name you would like displayed publicly, and leave out private contact details.</p><p class="small">For questions or anything you would prefer to discuss privately, <a href="contact.html">send us a message</a>.</p></div>
+      <form id="customer-review-form" class="form" action="/api/reviews" method="post">
+        <p id="review-form-status" class="status-msg" role="status" aria-live="polite">Checking review submissions…</p>
+        <fieldset id="customer-review-fields" disabled><legend class="sr-only">Your review</legend>
+          <label for="customer-review-author">Display name</label><input id="customer-review-author" name="author" autocomplete="name" maxlength="100" required aria-describedby="review-name-help"><p id="review-name-help" class="small review-help">A first name or family name is enough.</p>
+          <label for="customer-review-kitten">Your cat’s name <span class="small">(optional)</span></label><input id="customer-review-kitten" name="kitten" maxlength="100">
+          <label for="customer-review-body">Your review</label><textarea id="customer-review-body" name="body" rows="7" minlength="20" maxlength="3000" required aria-describedby="review-body-help"></textarea><p id="review-body-help" class="small review-help">20–3000 characters. Please do not include phone numbers, email addresses or home addresses.</p>
+          <div class="hp" aria-hidden="true"><label for="review-website">Leave this empty</label><input id="review-website" name="website" tabindex="-1" autocomplete="off"></div>
+          <label class="consent" for="review-consent"><input id="review-consent" name="consent" type="checkbox" required><span>I agree that my display name, cat’s name and review may be published on this website after approval.</span></label>
+          <div id="review-verification"></div><button class="btn btn-primary" type="submit" disabled>Send for approval</button>
+        </fieldset>
+        <p class="small">You can also <a href="contact.html">contact us directly</a> to share a review.</p>
+      </form>
+    </div></section>
+  </main>
+  <footer class="site-footer">
+    <div class="wrap">
+      <p><strong>ALASKASIBCAT</strong> &middot; Wasilla, Alaska</p>
+      <ul class="social" aria-label="Social media">
+            <li><a href="https://www.instagram.com/siberian.cat.alaska.cattery/" rel="me noopener" target="_blank">Instagram</a></li>
+            <li><a href="https://www.facebook.com/alaskasibcat/" rel="me noopener" target="_blank">Facebook</a></li>
+          </ul>
+      <p class="small">CFA-registered cattery. &copy; <span id="year">2026</span> ALASKASIBCAT</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script type="module" src="js/reviews-public.js?v=20261025a"></script>
+</body>
+</html>
