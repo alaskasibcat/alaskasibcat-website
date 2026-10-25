@@ -118,3 +118,9 @@ a{color:var(--accent-dark)}
 .photo-link{display:block}
 @media (max-width:48rem){.gallery{grid-template-columns:repeat(2,1fr)}}
 .social a{display:inline-block;padding:.6rem 0}
+
+/* previous litters */
+.litter{margin-top:2.5rem;padding-top:1.5rem;border-top:1px solid var(--line)}
+.litter-h{font-family:var(--serif);font-weight:500;font-size:1.2rem;margin:1.25rem 0 .5rem}
+.gallery-2{grid-template-columns:repeat(2,1fr);max-width:32rem}
+.gal-item figcaption{padding:.4rem .6rem;font-size:.9rem;color:var(--muted);text-align:center}
