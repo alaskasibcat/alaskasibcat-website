@@ -20,7 +20,9 @@ a{color:var(--accent-dark)}
 
 .site-header{position:sticky;top:0;background:rgba(251,246,241,.96);border-bottom:1px solid var(--line);z-index:10}
 .header-inner{display:flex;align-items:center;justify-content:space-between;min-height:3.75rem;gap:1rem}
-.brand{font-family:var(--serif);font-size:1.3rem;letter-spacing:.12em;text-decoration:none;color:var(--ink)}
+.brand{display:flex;flex-direction:column;text-decoration:none;color:var(--ink);line-height:1.15;padding:.35rem 0}
+.brand-name{font-family:var(--serif);font-size:1.25rem;letter-spacing:.02em}
+.brand-sub{font-size:.68rem;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin-top:.15rem}
 .site-nav ul{display:flex;gap:1.5rem;list-style:none;margin:0;padding:0}
 .site-nav a{text-decoration:none;color:var(--ink);padding:.5rem 0;display:inline-block}
 .site-nav a:hover{color:var(--accent)}
@@ -77,6 +79,8 @@ a{color:var(--accent-dark)}
   .hero{padding-top:1.5rem}
   .photo-hero{aspect-ratio:4/3;max-height:none}
   .btn{width:100%;text-align:center}
+  .brand-name{font-size:1.05rem}
+  .brand-sub{font-size:.62rem}
 }
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 
