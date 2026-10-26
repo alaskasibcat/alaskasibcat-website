@@ -142,3 +142,18 @@ a{color:var(--accent-dark)}
 
 .header-inner{max-width:none;min-height:4.25rem;padding-left:clamp(1rem,3vw,3rem);padding-right:clamp(1rem,3vw,3rem)}
 @media(min-width:48.01rem){.brand-name{font-size:1.4rem}.brand-sub{font-size:.72rem}}
+
+/* Clear branding and the unified kitten/adult-cat availability page. */
+.brand{min-width:0}
+.brand-name{font-size:clamp(1.45rem,2.2vw,1.9rem);font-weight:650;color:#39231f}
+.brand-sub{font-size:1rem;font-weight:700;letter-spacing:.16em;color:var(--accent-dark);margin-top:.25rem}
+.availability-page{max-width:84rem}
+.availability-page > .lead{max-width:65rem}
+.availability-groups{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin:2.5rem 0}
+.availability-group{padding:1.5rem;border:1px solid var(--line);border-radius:.75rem;background:#fff;min-width:0}
+.availability-group h2{margin-top:0}
+.availability-group .kitten-grid:empty{display:none}
+.availability-group .kitten-grid{margin-top:1.25rem;grid-template-columns:repeat(auto-fill,minmax(min(100%,14rem),1fr))}
+.availability-contact{display:grid;grid-template-columns:1fr 1fr;gap:2rem;align-items:start;margin-top:2rem;padding-top:1.5rem;border-top:1px solid var(--line)}
+.availability-contact h2{margin-top:0}
+@media(max-width:48rem){.brand-name{font-size:1.2rem}.brand-sub{font-size:.85rem}.availability-groups,.availability-contact{grid-template-columns:1fr}.availability-group{padding:1.25rem}}

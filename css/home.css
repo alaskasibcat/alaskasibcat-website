@@ -27,3 +27,19 @@
 .cover-card{border:0;border-radius:0;box-shadow:none;padding:1.5rem clamp(1rem,4vw,4rem) 2rem}
 .cover-card .lead{margin-left:auto;margin-right:auto;max-width:44rem}
 @media(max-width:48rem){.cover{padding-bottom:0}.cover-card{padding:1.25rem 1rem 1.5rem}}
+
+/* Owner feedback: wider introduction, stronger type, and a positive availability CTA. */
+.home-page main > .section > .wrap{max-width:90rem;padding-left:clamp(1rem,3vw,3rem);padding-right:clamp(1rem,3vw,3rem)}
+.cover-card{padding:2rem clamp(1rem,3vw,3rem) 2.5rem}
+.cover-card .eyebrow{font-size:clamp(1rem,1.5vw,1.3rem);font-weight:750;letter-spacing:.1em;color:var(--accent-dark)}
+.cover-card h1{font-size:clamp(2.1rem,4.1vw,3.75rem);font-weight:600;line-height:1.14;color:#39231f;max-width:80rem;margin:0 auto 1rem}
+.cover-card .lead{max-width:76rem;font-size:clamp(1.15rem,1.9vw,1.6rem);line-height:1.6;color:var(--ink)}
+.cover-card .actions{margin-top:1.25rem}
+.cover-links{font-size:1.05rem}
+.story-layout{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(18rem,.8fr);gap:clamp(1.5rem,3vw,3rem);align-items:start}
+.story-copy{font-size:1.15rem}
+.story-copy h2{font-weight:600}
+#story .facts-grid{grid-template-columns:1fr;margin:0;padding:0}
+.availability-invitation .lead{max-width:65rem;color:var(--ink)}
+@media(max-width:64rem){.story-layout{grid-template-columns:1fr}#story .facts-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:48rem){.cover-card{padding:1.5rem 1rem 2rem}.cover-card h1{font-size:2.1rem}.cover-card .eyebrow{font-size:1rem}.cover-card .lead{font-size:1.2rem}.story-copy{font-size:1.1rem}#story .facts-grid{grid-template-columns:1fr}}
