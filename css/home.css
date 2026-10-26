@@ -43,3 +43,6 @@
 .availability-invitation .lead{max-width:65rem;color:var(--ink)}
 @media(max-width:64rem){.story-layout{grid-template-columns:1fr}#story .facts-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
 @media(max-width:48rem){.cover-card{padding:1.5rem 1rem 2rem}.cover-card h1{font-size:2.1rem}.cover-card .eyebrow{font-size:1rem}.cover-card .lead{font-size:1.2rem}.story-copy{font-size:1.1rem}#story .facts-grid{grid-template-columns:1fr}}
+
+/* Scroll cue on wide screens: the cover fills the first screen, so show that the welcome text is below (2026-10-26). Decorative only. */
+@media(min-width:64rem){.cover-media{position:relative}.cover-media::after{content:"Welcome \2193" / "";position:absolute;left:50%;bottom:1.1rem;transform:translateX(-50%);padding:.45rem 1.1rem;border-radius:999px;background:rgba(251,246,241,.92);color:var(--accent-dark);font-size:1rem;font-weight:650;letter-spacing:.04em;line-height:1.2;pointer-events:none}}
