@@ -3,13 +3,13 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Available kittens | ALASKASIBCAT</title>
-  <meta name="description" content="Available Siberian kittens from ALASKASIBCAT in Wasilla, Alaska.">
-  <!-- DRAFT: remove the next line only after Natalia approves publication -->
+  <title>Available kittens &amp; adult cats | ALASKASIBCAT</title>
+  <meta name="description" content="Meet Siberian kittens and retired adult cats from ALASKASIBCAT in Wasilla, Alaska. Ask about current availability and future reservations.">
+  <!-- DRAFT: remove the next line only after the owner approves publication -->
   <meta name="robots" content="noindex, nofollow">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Available kittens | ALASKASIBCAT">
-  <meta property="og:description" content="Available Siberian kittens from ALASKASIBCAT in Wasilla, Alaska.">
+  <meta property="og:title" content="Available kittens &amp; adult cats | ALASKASIBCAT">
+  <meta property="og:description" content="Meet Siberian kittens and retired adult cats from ALASKASIBCAT in Wasilla, Alaska. Ask about current availability and future reservations.">
   <meta property="og:image" content="https://alaskasibcat.com/images/home-cover-2026-10-24-1672.jpg">
   <meta property="og:image:width" content="1672">
   <meta property="og:image:height" content="941">
@@ -17,7 +17,7 @@
   <meta property="og:url" content="https://alaskasibcat.com/kittens">
   <link rel="canonical" href="https://alaskasibcat.com/kittens">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="css/styles.css?v=20261025c">
+  <link rel="stylesheet" href="css/styles.css?v=20261025e">
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -34,25 +34,30 @@
     </div>
   </header>
 
-  <main id="main"><section class="section"><div class="wrap"><h1 class="h-page">Available kittens</h1>
-<p class="lead">Each kitten is listed with confirmed details only. Availability can change, so please write to us to confirm.</p>
-<p class="note">Page updated: <span id="updated">October 23, 2026</span></p>
-<div id="kitten-list" class="kitten-grid" aria-live="polite"></div>
-<div id="kitten-empty" class="empty" hidden>
-<p><strong>No kittens are listed right now.</strong> Litters are announced here as soon as they are confirmed.</p>
-<p>Leave your name and email, and we will write to you when a litter is confirmed. No obligation.</p>
-<form id="waitlist-form" class="form form-inline" novalidate>
+  <main id="main"><section class="section"><div class="wrap availability-page">
+<h1 class="h-page">Available kittens &amp; adult cats</h1>
+<p class="lead">Find your Siberian companion. Meet our kittens and adult cats retired from our breeding program, or contact our cattery about reservations for future litters.</p>
+<p class="actions"><a class="btn btn-primary" href="/contact">Ask about current availability</a><a class="btn btn-quiet" href="/adopt">How to adopt</a></p>
+<div class="availability-groups">
+<section class="availability-group" id="available-kittens"><h2>Siberian kittens</h2><p>Get to know our kittens and contact us about the companion you have in mind, whether you are ready now or planning ahead.</p><div id="kitten-list" class="kitten-grid" aria-live="polite"></div></section>
+<section class="availability-group" id="adult-cats"><h2>Retired adult cats</h2><p>Adult Siberians retiring from our breeding program can make wonderful companions. Contact our cattery to discuss individual cats and a suitable home.</p><div id="adult-cat-list" class="kitten-grid" aria-live="polite"></div></section>
+</div>
+<section class="availability-contact" aria-labelledby="inquiry-title"><div>
+<h2 id="inquiry-title">Current availability &amp; future reservations</h2>
+<p>Tell us a little about the cat you are looking for and your preferred timing. We can discuss current availability or a future litter. Sending an inquiry carries no obligation.</p>
+<p>We reply in writing, usually within a day or two.</p>
+<p><a class="text-link" href="/preparing">Getting ready for your kitten</a></p>
+</div><form id="waitlist-form" class="form" novalidate>
 <p id="wl-status" class="status-msg" role="status" aria-live="polite"></p>
 <label for="wl-name">Your name</label><input id="wl-name" name="name" type="text" autocomplete="name" required>
 <span class="err" id="e-wl-name"></span>
 <label for="wl-email">Email</label><input id="wl-email" name="email" type="email" autocomplete="email" required>
 <span class="err" id="e-wl-email"></span>
-<label for="wl-msg">Anything we should know? (optional)</label><textarea id="wl-msg" name="message" rows="2"></textarea>
+<label for="wl-msg">What are you looking for? (optional)</label><textarea id="wl-msg" name="message" rows="4" placeholder="A kitten or adult cat, your household, and your preferred timing"></textarea>
 <div class="hp" aria-hidden="true"><label for="wl-site">Leave this empty</label><input id="wl-site" name="website" type="text" tabindex="-1" autocomplete="off"></div>
-<button class="btn btn-primary" type="submit">Join the waiting list</button>
-</form>
-</div>
-<p class="actions"><a class="btn btn-primary" href="/adopt">How to adopt</a></p></div></section></main>
+<button class="btn btn-primary" type="submit">Ask about availability</button>
+</form></section>
+</div></section></main>
 
   <footer class="site-footer">
     <div class="wrap">
@@ -66,9 +71,9 @@
     </div>
   </footer>
 
-  <script src="data/kittens.js"></script>
+  <script src="data/kittens.js?v=20261025e"></script>
   <script src="data/config.js"></script>
-  <script src="js/waitlist.js"></script>
-  <script src="js/main.js?v=20261025c"></script>
+  <script src="js/waitlist.js?v=20261025e"></script>
+  <script src="js/main.js?v=20261025e"></script>
 </body>
 </html>

@@ -24,9 +24,9 @@ Keep Our cats, Available kittens and Previous litters separate. Parent blocks be
 
 ## Update kitten listings
 
-The list is data/kittens.js. Each entry can contain a name, sex, color, birth date, ready date, status, price, description, photo path and photo alt text. An entry appears only when published is true. Do not add unconfirmed data. With no published entries the page invites visitors to contact us or join the no-obligation waiting list; that does not state that the cattery has no kittens.
+The two lists are in data/kittens.js: window.KITTENS for kittens and window.AVAILABLE_ADULTS for retired adult cats. Each entry can contain a name, sex, color, birth date, ready date, status, price, description, photo path and photo alt text. An entry appears only when published is true. Do not add unconfirmed data. The home page always links to the availability section. The availability page invites visitors to ask about current animals and future reservations, even before individual entries are published. It does not state that no kittens are available.
 
-Change the visible update date only after the information has actually been checked. Do not add fake reviews, placeholder kittens or invented biographies.
+Check the information before publishing or changing a listing. Do not add fake reviews, placeholder kittens or invented biographies.
 
 ## Website structure and updates
 
