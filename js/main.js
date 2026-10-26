@@ -43,14 +43,16 @@
     var notice = document.createElement('p');
     notice.className = 'gallery-empty';
     notice.textContent = 'Photos will be added soon.';
-    notice.hidden = true;
+    notice.hidden = false;
     gallery.appendChild(notice);
     function refresh() {
       var visiblePhoto = images.some(function (img) { return img.complete && img.naturalWidth > 0; });
-      var allSettled = images.every(function (img) { return img.complete; });
-      notice.hidden = visiblePhoto || !allSettled;
+      notice.hidden = visiblePhoto;
     }
     images.forEach(function (img) {
+      // Hidden lazy images would never load after the owner adds them.
+      img.loading = 'eager';
+      img.closest('figure').hidden = !(img.complete && img.naturalWidth > 0);
       function settled() {
         img.closest('figure').hidden = !img.naturalWidth;
         refresh();
