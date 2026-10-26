@@ -37,6 +37,31 @@
   var y = document.getElementById('year');
   if (y) y.textContent = new Date().getFullYear();
 
+  // Keep the page usable before Natalia uploads the real photographs.
+  document.querySelectorAll('.cat-block .gallery').forEach(function (gallery) {
+    var images = Array.from(gallery.querySelectorAll('img'));
+    var notice = document.createElement('p');
+    notice.className = 'gallery-empty';
+    notice.textContent = 'Photos will be added soon.';
+    notice.hidden = true;
+    gallery.appendChild(notice);
+    function refresh() {
+      var visiblePhoto = images.some(function (img) { return img.complete && img.naturalWidth > 0; });
+      var allSettled = images.every(function (img) { return img.complete; });
+      notice.hidden = visiblePhoto || !allSettled;
+    }
+    images.forEach(function (img) {
+      function settled() {
+        img.closest('figure').hidden = !img.naturalWidth;
+        refresh();
+      }
+      img.addEventListener('load', settled);
+      img.addEventListener('error', settled);
+      if (img.complete) settled();
+    });
+    refresh();
+  });
+
   // Kittens come from data/kittens.js, so Natalia edits data, not pages.
   var list = document.getElementById('kitten-list');
   var empty = document.getElementById('kitten-empty');
