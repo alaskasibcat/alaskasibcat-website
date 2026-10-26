@@ -1,48 +1,25 @@
-/* Home page cover (approved by Natalia 2026-10-24, HOME-INTEGRATE-20261024-01). Loaded after styles.css, only by index.html / index-preview.html */
-.cover{position:relative;background:#e9eef2;padding:0 0 1.5rem}
-.cover-media{margin:0 auto;line-height:0;max-width:62rem}
-.cover-media img{display:block;width:100%;height:auto;object-fit:contain;aspect-ratio:1672/941}
-.cover > .wrap{max-width:62rem;padding:0}
-.cover-card{position:relative;background:rgba(251,246,241,.97);border:1px solid var(--line);border-top:0;border-radius:0 0 1rem 1rem;padding:1.1rem 1.5rem;max-width:none;margin:0;box-shadow:0 10px 30px rgba(59,42,39,.12);text-align:center}
-.cover-card .actions{justify-content:center}
-.cover-card h1{font-size:clamp(1.5rem,2.6vw,2rem);margin-bottom:.4rem}
-.cover-card .lead{margin-bottom:.5rem}
-.cover-card .actions{margin-top:.75rem}
-.cover-links{margin:.75rem 0 0;font-size:.95rem;color:var(--muted)}
-.cover-links a{font-weight:600;display:inline-block;padding:.45rem 0}
-#story .lead{color:var(--accent-dark)}
-#story p{margin:0 0 1rem}
-@media (max-width:48rem){
-  .cover{padding-bottom:1.5rem}
-  .cover-card{margin:0;padding:1.1rem 1rem;text-align:left}
-  .cover-card .actions{justify-content:flex-start}
-  .cover-card h1{font-size:1.5rem}
-  .cover-card .lead{font-size:1rem}
-}
-
-/* Natalia: full-width cover and welcome section, no side bands (2026-10-25). */
-.cover{padding-bottom:0;background:var(--bg)}
-.cover-media{max-width:none}
-.cover > .wrap{max-width:none}
-.cover-card{border:0;border-radius:0;box-shadow:none;padding:1.5rem clamp(1rem,4vw,4rem) 2rem}
-.cover-card .lead{margin-left:auto;margin-right:auto;max-width:44rem}
-@media(max-width:48rem){.cover{padding-bottom:0}.cover-card{padding:1.25rem 1rem 1.5rem}}
-
-/* Owner feedback: wider introduction, stronger type, and a positive availability CTA. */
+/* Home: compact full-width cover, original image proportions, owner's English welcome. */
+.cover{position:relative;background:var(--bg);padding:0}
+.cover-media{position:relative;isolation:isolate;overflow:hidden;display:flex;align-items:center;justify-content:center;line-height:0;background:#dce7ee}
+.cover-media::before{content:"";position:absolute;inset:-2rem;z-index:0;background:url("../images/home-cover-2026-10-24-1672.jpg") center/cover;filter:blur(26px);opacity:.6}
+.cover-media::after{content:"";position:absolute;inset:0;z-index:0;background:linear-gradient(90deg,rgba(220,232,241,.5),transparent 25%,transparent 75%,rgba(220,232,241,.5));pointer-events:none}
+.cover-visual{position:relative;z-index:1;width:100%;flex:none;line-height:0}
+.cover-visual picture{display:block}
+.cover-visual img{display:block;width:100%;height:auto;aspect-ratio:1672/941;object-fit:contain}
+.cover-location{position:absolute;left:50%;bottom:.65rem;transform:translateX(-50%);margin:0;padding:.35rem .8rem;border-radius:.35rem;background:rgba(249,252,255,.86);color:#245d80;font-size:1rem;font-weight:750;letter-spacing:.08em;line-height:1.25;text-transform:uppercase;white-space:nowrap}
+.cover > .wrap{max-width:none;padding:0}
+.cover-card{position:relative;background:var(--bg);border:0;border-radius:0;margin:0;padding:1.25rem clamp(1rem,3vw,3rem);text-align:center}
+.cover-card h1{font-size:clamp(2.1rem,4.1vw,3.75rem);font-weight:600;line-height:1.14;color:#39231f;max-width:80rem;margin:0 auto .6rem}
+.cover-card .lead{max-width:76rem;margin:.6rem auto 1rem;font-size:clamp(1.15rem,1.9vw,1.6rem);line-height:1.5;color:var(--ink)}
+.cover-actions{display:flex;flex-wrap:nowrap;gap:.5rem;width:max-content;max-width:100%;margin:1rem auto 0;overflow-x:auto;justify-content:flex-start;padding-bottom:.3rem;scroll-padding-inline:.5rem}
+.cover-actions .btn{flex:0 0 auto;width:auto;white-space:nowrap;padding:.75rem 1rem;font-size:1rem}
 .home-page main > .section > .wrap{max-width:90rem;padding-left:clamp(1rem,3vw,3rem);padding-right:clamp(1rem,3vw,3rem)}
-.cover-card{padding:2rem clamp(1rem,3vw,3rem) 2.5rem}
-.cover-card .eyebrow{font-size:clamp(1rem,1.5vw,1.3rem);font-weight:750;letter-spacing:.1em;color:var(--accent-dark)}
-.cover-card h1{font-size:clamp(2.1rem,4.1vw,3.75rem);font-weight:600;line-height:1.14;color:#39231f;max-width:80rem;margin:0 auto 1rem}
-.cover-card .lead{max-width:76rem;font-size:clamp(1.15rem,1.9vw,1.6rem);line-height:1.6;color:var(--ink)}
-.cover-card .actions{margin-top:1.25rem}
-.cover-links{font-size:1.05rem}
+#story p{margin:0 0 1rem}
 .story-layout{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(18rem,.8fr);gap:clamp(1.5rem,3vw,3rem);align-items:start}
 .story-copy{font-size:1.15rem}
 .story-copy h2{font-weight:600}
 #story .facts-grid{grid-template-columns:1fr;margin:0;padding:0}
 .availability-invitation .lead{max-width:65rem;color:var(--ink)}
+@media(min-width:48.01rem){.cover-media{--cover-height:clamp(22rem,52vh,34rem);height:var(--cover-height)}.cover-visual{width:min(100%,calc(var(--cover-height)*1672/941))}}
 @media(max-width:64rem){.story-layout{grid-template-columns:1fr}#story .facts-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
-@media(max-width:48rem){.cover-card{padding:1.5rem 1rem 2rem}.cover-card h1{font-size:2.1rem}.cover-card .eyebrow{font-size:1rem}.cover-card .lead{font-size:1.2rem}.story-copy{font-size:1.1rem}#story .facts-grid{grid-template-columns:1fr}}
-
-/* Scroll cue on wide screens: the cover fills the first screen, so show that the welcome text is below (2026-10-26). Decorative only. */
-@media(min-width:64rem){.cover-media{position:relative}.cover-media::after{content:"Welcome \2193" / "";position:absolute;left:50%;bottom:1.1rem;transform:translateX(-50%);padding:.45rem 1.1rem;border-radius:999px;background:rgba(251,246,241,.92);color:var(--accent-dark);font-size:1rem;font-weight:650;letter-spacing:.04em;line-height:1.2;pointer-events:none}}
+@media(max-width:48rem){.cover-location{font-size:.8rem;letter-spacing:.05em;padding:.3rem .6rem;bottom:.5rem}.cover-card{padding:1.1rem 1rem 1.25rem;text-align:left}.cover-card h1{font-size:2.1rem}.cover-card .lead{font-size:1.2rem}.cover-actions{margin-left:0;margin-right:0}.story-copy{font-size:1.1rem}#story .facts-grid{grid-template-columns:1fr}}
