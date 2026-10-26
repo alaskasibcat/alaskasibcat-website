@@ -1,26 +1,39 @@
-# Сайт ALASKASIBCAT — рабочий макет
+# ALASKASIBCAT — website owner guide
 
-Статус: черновик всех пяти страниц. Не опубликован. В коде стоит запрет индексации (noindex) до твоего утверждения.
+Updated October 25, 2026. Website: https://alaskasibcat.com/
 
-## Как посмотреть
-Дважды нажми на файл `index.html` — он откроется в браузере. Ничего устанавливать не нужно.
+## Your everyday links
 
-## Из чего состоит
-- `index.html` — главная; `kittens.html` — котята; `about.html` — о питомнике; `adopt.html` — как приобрести; `contact.html` — контакты и форма
-- `js/form.js` и `data/config.js` — форма; в `config.js` потом вставляется адрес сервиса приёма заявок (секретные ключи туда не класть)
-- `css/styles.css` — внешний вид (цвета в начале файла)
-- `js/main.js` — меню на телефоне и показ котят
-- `data/kittens.js` — список котят (здесь ты или помощник добавляете котят, страницы переделывать не нужно)
-- `images/` — сюда будут класть оптимизированные фотографии
+- Public website: https://alaskasibcat.com/
+- Reviews: https://alaskasibcat.com/reviews
+- Private reviews admin: https://alaskasibcat.com/admin/
+- Kitten preparation guide: https://alaskasibcat.com/preparing
+- Repository: https://github.com/alaskasibcat/alaskasibcat-website
 
-## Как добавить котёнка
-Открой `data/kittens.js`, скопируй пример из комментария, заполни и поставь `published: true`. Пока стоит `false` или список пуст, посетитель видит сообщение «котят сейчас нет, спросите о будущих помётах».
+## Manage reviews
 
-## Перенос на другой хостинг
-Сайт — обычные файлы без Framer и без сервера. Подойдёт любой хостинг для статических сайтов (GitHub Pages, Cloudflare Pages, Netlify и другие): папку просто загружают целиком.
+Open the private admin page and sign in with your approved email and the one-time code. Visitors cannot access this area. New reviews are drafts; they never publish automatically.
 
-## Что пока не работает (специально)
-- Форма: подключена к Formspree (форма «ALASKASIBCAT contact», заявки на почту питомника). Проверено: Formspree принял тестовое сообщение и письмо пришло. Ещё не проверено: отправка с готового опубликованного сайта, это сделаем после публикации. Бесплатный тариф: 50 заявок в месяц.
-- Блоки «Pending confirmation» (цена, комплект, документы, здоровье и гарантия, доставка, вопросы, история, родители) ждут твоих подтверждённых сведений.
-- Фотографии — временные пунктирные блоки.
-- Ссылки на соцсети — ждут подтверждения.
+Use Pending review to find submissions. Edit the display name, optional kitten name, date or text, then save. Publish shows a review publicly. Hide removes it from public view. Delete moves it to Deleted; Restore recovers it. Saving an already published review updates its public text. These controls do not manage photos or kitten listings.
+
+## Add photographs later
+
+Only Natalia uploads images to GitHub. The website code already refers to the selected Our cats filenames in images/cats. Before upload, the page displays a simple notice instead of broken photos. The uploaded photos appear at those same paths without changing the page layout. Use the prepared files in the project upload folder; keep their existing names. Biography text can be added separately later.
+
+Keep Our cats, Available kittens and Previous litters separate. Parent blocks belong only in the selected past-litter galleries, never on Available kittens. Previous litters remains outside navigation until Natalia selects its real content.
+
+## Update kitten listings
+
+The list is data/kittens.js. Each entry can contain a name, sex, color, birth date, ready date, status, price, description, photo path and photo alt text. An entry appears only when published is true. Do not add unconfirmed data. With no published entries the page invites visitors to contact us or join the no-obligation waiting list; that does not state that the cattery has no kittens.
+
+Change the visible update date only after the information has actually been checked. Do not add fake reviews, placeholder kittens or invented biographies.
+
+## Website structure and updates
+
+index.html, about.html, cats.html, kittens.html, adopt.html, contact.html, reviews.html and preparing.html are the main public pages. previous-litters.html is a prepared page awaiting selected materials. The home cover uses css/home.css. Shared styles are in css/styles.css.
+
+Cloudflare Pages builds the main branch and publishes automatically. The build copies public assets into dist. Review handling uses Pages Functions, Cloudflare Access and D1; moving only the static files to another host would not transfer the reviews system.
+
+Keep private configuration and secrets outside this public repository. The admin email is not a public contact address. Existing form delivery, review protection and anti-spam settings are already connected.
+
+Noindex remains on the pages until Natalia explicitly approves opening the site to search engines. Publishing a text update does not remove that setting.
