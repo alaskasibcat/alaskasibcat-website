@@ -19,3 +19,11 @@
   .cover-card h1{font-size:1.5rem}
   .cover-card .lead{font-size:1rem}
 }
+
+/* Natalia: full-width cover and welcome section, no side bands (2026-10-25). */
+.cover{padding-bottom:0;background:var(--bg)}
+.cover-media{max-width:none}
+.cover > .wrap{max-width:none}
+.cover-card{border:0;border-radius:0;box-shadow:none;padding:1.5rem clamp(1rem,4vw,4rem) 2rem}
+.cover-card .lead{margin-left:auto;margin-right:auto;max-width:44rem}
+@media(max-width:48rem){.cover{padding-bottom:0}.cover-card{padding:1.25rem 1rem 1.5rem}}
