@@ -52,6 +52,7 @@ async function initialize() {
         'expired-callback':()=>{ready('');message.textContent='Please complete verification again before sending.';},
         'error-callback':()=>{unavailable();return true;}
       });
+      message.textContent='';
     } catch {unavailable();}
   }
   if(window.turnstile) startWidget();
