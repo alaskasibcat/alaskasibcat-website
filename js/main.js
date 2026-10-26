@@ -37,7 +37,7 @@
   var y = document.getElementById('year');
   if (y) y.textContent = new Date().getFullYear();
 
-  // Keep the page usable before Natalia uploads the real photographs.
+  // Keep the page usable before the owner uploads the real photographs.
   document.querySelectorAll('.cat-block .gallery').forEach(function (gallery) {
     var images = Array.from(gallery.querySelectorAll('img'));
     var notice = document.createElement('p');
@@ -64,12 +64,10 @@
     refresh();
   });
 
-  // Kittens come from data/kittens.js, so Natalia edits data, not pages.
+  // Published kittens and retired adult cats use separate owner-managed lists.
   var list = document.getElementById('kitten-list');
-  var empty = document.getElementById('kitten-empty');
-  if (!list || !empty) return;
-  var kittens = (window.KITTENS || []).filter(function (k) { return k.published === true; });
-  if (!kittens.length) { empty.hidden = false; return; }
+  var adultList = document.getElementById('adult-cat-list');
+  if (!list) return;
 
   function el(tag, cls, text) {
     var n = document.createElement(tag);
@@ -77,23 +75,31 @@
     if (text) n.textContent = text;
     return n;
   }
-  kittens.forEach(function (k) {
-    var card = el('article', 'kitten-card');
-    if (k.photo) {
-      var img = el('img');
-      img.src = k.photo; img.alt = k.photoAlt || k.name; img.loading = 'lazy';
-      card.appendChild(img);
-    }
-    var body = el('div', 'body');
-    body.appendChild(el('span', 'status', k.status || 'Available'));
-    body.appendChild(el('h3', '', k.name));
-    [k.sex, k.color, k.born ? 'Born ' + k.born : '', k.ready ? 'Ready to go home: ' + k.ready : '', k.price ? 'Price: ' + k.price : '', k.about].forEach(function (t) {
-      if (t) body.appendChild(el('p', '', t));
+  function showAnimals(items, destination) {
+    if (!destination) return;
+    (items || []).filter(function (animal) { return animal.published === true; }).forEach(function (animal) {
+      var card = el('article', 'kitten-card');
+      if (animal.photo) {
+        var img = el('img');
+        img.alt = animal.photoAlt || animal.name;
+        img.loading = 'lazy';
+        img.addEventListener('error', function () { img.hidden = true; });
+        img.src = animal.photo;
+        card.appendChild(img);
+      }
+      var body = el('div', 'body');
+      body.appendChild(el('span', 'status', animal.status || 'Available'));
+      body.appendChild(el('h3', '', animal.name));
+      [animal.sex, animal.color, animal.born ? 'Born ' + animal.born : '', animal.ready ? 'Ready to go home: ' + animal.ready : '', animal.price ? 'Price: ' + animal.price : '', animal.about].forEach(function (text) {
+        if (text) body.appendChild(el('p', '', text));
+      });
+      var link = el('a', 'btn btn-quiet', 'Ask about ' + animal.name);
+      link.href = '/contact?kitten=' + encodeURIComponent(animal.name);
+      body.appendChild(link);
+      card.appendChild(body);
+      destination.appendChild(card);
     });
-    var a = el('a', 'btn btn-quiet', 'Ask about ' + k.name);
-    a.href = '/contact?kitten=' + encodeURIComponent(k.name);
-    body.appendChild(a);
-    card.appendChild(body);
-    list.appendChild(card);
-  });
+  }
+  showAnimals(window.KITTENS, list);
+  showAnimals(window.AVAILABLE_ADULTS, adultList);
 })();

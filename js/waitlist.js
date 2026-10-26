@@ -3,7 +3,7 @@
   var status=document.getElementById('wl-status');
   var endpoint=(window.SITE_CONFIG||{}).formEndpoint||'';
   var btn=form.querySelector('button[type=submit]');
-  if(!endpoint){ btn.disabled=true; status.textContent='The waiting list is not connected yet.'; }
+  if(!endpoint){ btn.disabled=true; status.textContent='Please use our contact page to send your inquiry.'; }
   function err(id,m,fid){document.getElementById(id).textContent=m;var f=document.getElementById(fid);if(m)f.setAttribute('aria-invalid','true');else f.removeAttribute('aria-invalid');return !m;}
   form.addEventListener('submit',function(e){
     e.preventDefault(); if(!endpoint) return;
@@ -13,8 +13,8 @@
     if(!ok){status.textContent='Please fix the highlighted fields.';return;}
     if(form.website.value) return;
     btn.disabled=true; status.textContent='Sending...';
-    fetch(endpoint,{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify({_subject:'Waiting list: '+n,type:'waiting list',name:n,email:em,message:m||'(no message)'})})
-    .then(function(r){ if(!r.ok) throw new Error('bad status'); status.textContent='Thank you. You are on the list, and we will write when a litter is confirmed.'; form.reset(); })
+    fetch(endpoint,{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify({_subject:'Availability inquiry: '+n,type:'availability inquiry',name:n,email:em,message:m||'(no message)'})})
+    .then(function(r){ if(!r.ok) throw new Error('bad status'); status.textContent='Thank you. Your inquiry has been sent. We will reply by email.'; form.reset(); })
     .catch(function(){ status.textContent='Sorry, that did not go through. Please try again later or use the contact page.'; })
     .then(function(){btn.disabled=false;});
   });
