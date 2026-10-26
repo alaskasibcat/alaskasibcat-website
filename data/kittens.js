@@ -1,8 +1,8 @@
-// Kitten list. Add one block per kitten and set published: true ONLY after Natalia confirms the details.
-// Empty list = the site shows "no kittens right now, ask about future litters".
-// Example (not published, never shown):
-//   { published: false, name: "Name", sex: "Girl", color: "Color", born: "2026-01-01",
-//     about: "One or two sentences about personality.", status: "Available", price: "$1,800",
-//     ready: "January 2027",   (parents are NOT shown on kitten cards — Natalia's rule)
-//     photo: "images/kittens/name-1.jpg", photoAlt: "Describe what is in the photo" }
+// Confirm every entry before setting published: true. Parent blocks are never shown here.
+// Add kittens to KITTENS and retired adult cats to AVAILABLE_ADULTS.
+// Both lists support: name, sex, color, born, ready, status, price, about, photo, photoAlt.
+// Empty arrays leave the positive availability invitation and inquiry form visible.
+// Template only (not a published animal):
+// {published:false, name:"Name", status:"Available", about:"Confirmed description", photo:"images/kittens/file.webp", photoAlt:"Photo description"}
 window.KITTENS = [];
+window.AVAILABLE_ADULTS = [];
