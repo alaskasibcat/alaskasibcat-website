@@ -157,3 +157,4 @@ a{color:var(--accent-dark)}
 .availability-contact{display:grid;grid-template-columns:1fr 1fr;gap:2rem;align-items:start;margin-top:2rem;padding-top:1.5rem;border-top:1px solid var(--line)}
 .availability-contact h2{margin-top:0}
 @media(max-width:48rem){.brand-name{font-size:1.2rem}.brand-sub{font-size:.85rem}.availability-groups,.availability-contact{grid-template-columns:1fr}.availability-group{padding:1.25rem}}
+.cat-bio{max-width:44rem;margin:0 0 1rem}
